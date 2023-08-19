@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'regular';
+  src: url(./assets/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'bold';
+  src: url(./assets/fonts/Montserrat-Bold.ttf);
+}
+
+body {
+  margin: 0;
+  text-align: center;
+}
+textarea{
+  font-size: large;
+  width: 500px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  padding: 20px;
+  border-color: rgb(3, 74, 74);
+  border-radius: 13px;
+  box-shadow: 20px 20px 60px #efebeb,
+          -20px -20px 60px #f0ecec;
+}
+
+span{
+  color: rgb(36, 36, 89);
+  font-size: 35px;
+
+}
