@@ -1,0 +1,12 @@
+.container {
+  box-shadow: 0 5px 5px #eee;
+  padding: 20px;
+  display: block;
+  text-align: center;
+  
+}
+
+.title {
+  font-family: 'bold';
+  margin: 0;
+}
