@@ -11,5 +11,7 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_MEASUREMENT_ID
 }
 
-export const firebaseApp = initializeApp(firebaseConfig)
+const firebaseApp = initializeApp(firebaseConfig)
 export const auth = getAuth(firebaseApp)
+auth.languageCode = 'pt-br'
+//auth.useDeviceLanguage()
