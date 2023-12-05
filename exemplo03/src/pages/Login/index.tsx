@@ -73,6 +73,30 @@ const Login = () => {
     }
   }
 
+  const signInWithGitHub = async () => {
+    const provider = new GoogleAuthProvider()
+    try {
+      const result = await signInWithPopup(auth, provider)
+      const user = result.user
+      const { email, photoURL, displayName } = user
+      console.log(email, photoURL, displayName)
+
+      // const userCredential =
+      //   GoogleAuthProvider.credentialFromResult(result)
+      const token = await auth.currentUser?.getIdToken()
+      console.log(token)
+      if (token) {
+        const decodedToken = jwtDecode(token)
+        const { exp } = decodedToken
+        setExp(exp || 0)
+        navigate('/home')
+      }
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+
   return (
     <div className={globalStyles.container}>
       <div className={globalStyles.loginArea}>
